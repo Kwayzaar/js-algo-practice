@@ -125,3 +125,41 @@
 // ];
 
 // var secondTree = myPlants[1].list[1]; //--> returns "pine"
+
+//Record collection exercise\\
+// var recordCollection = {
+//   2548: {
+//     albumTitle: 'Slippery When Wet',
+//     artist: 'Bon Jovi',
+//     tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//   },
+//   2468: {
+//     albumTitle: '1999',
+//     artist: 'Prince',
+//     tracks: ['1999', 'Little Red Corvette']
+//   },
+//   1245: {
+//     artist: 'Robert Palmer',
+//     tracks: []
+//   },
+//   5439: {
+//     albumTitle: 'ABBA Gold'
+//   }
+// };
+
+// function updateRecords(records, id, prop, value) {
+//    //updates all other props besides tracks
+//   if(prop !== "tracks" && value !== "" ) {
+//     records[id][prop] = value 
+//   } //2 creates tracks if none exist 
+//    else if (prop === "tracks" && records[id].hasOwnProperty("tracks") == false) {
+//      records[id][prop] = [value]
+//   } //3 pushes new value into tracks prop  
+//     else if (prop === "tracks" && value !== "") {
+//      records[id][prop].push(value)
+//   } //4 remove prop when value is null 
+//     else if (value == "") {
+//       delete records[id][prop]
+//   }
+//   return records;
+// }
