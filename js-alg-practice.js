@@ -223,3 +223,34 @@
 // }
 // multiplyAll(myArr);
 
+//Do...While loops\\
+// ensures the code will run at least once, but may also continue running as long as the while statement evaluates to true
+// var myArray = [];
+// var i = 10;
+// do {
+//   myArray.push(i);
+//   i++;
+// }
+// while (i < 5) 
+// console.log(myArray)
+
+//Recursion\\
+//Recursive functions are expressed in terms of themselves 
+// function sum(arr, n) {
+//   if (n <= 0) {
+//     return 0;
+//   } else {
+//     return sum(arr, n - 1) + arr[n - 1]
+        // sum first (n -1) elements of array add to value at index arr[n-1]
+//   }
+// }
+
+// sum([2, 3, 4], 1) --> 2
+  //sum(arr, n - 1) + arr[n - 1]
+  //sum(arr, 1 - 1) + arr[1 - 1]
+  //0 + 2 --> 2 
+
+// sum([2, 3, 4], 2) --> 5
+  //sum(arr, 2 - 1) + arr[2 - 1]
+  //sum value of first element of array and add to value at index 1
+  //2 + (index 1) 3 --> 5
