@@ -163,3 +163,63 @@
 //   }
 //   return records;
 // }
+
+//While loops\\
+//Runs as long as parameter is true --> i <= 5 --> run when we don't exactly know how many iterations we will need 
+//myArray should have 5 - 0 in descending order 
+// var myArray = []
+// var i = 0 
+// while(i <= 5) {
+//   myArray.unshift(i)
+//   i++
+// }
+
+//For loops\\
+//will rerun in a loop a certain number of times -> use when we know how many iterations we will need 
+//for(a; b; c) -> 
+//a: initialization statement -> executed once before loop start
+//b: condition statement -> continues loop as long as statement is true
+//c: final expression -> evaluated after every loop before next loop starts
+//push 1 - 5 into an array using for loop
+//var myArray = []
+//for (var = i; i <= 5; i++) {
+// myArray.push(i)
+// }
+
+//Iterate every other number with a for loop\\
+//push odd numbers from 1-9 into array 
+// var myArray = []
+// for (var i = 1; i <= 9; i += 2) {
+//   myArray.push(i)
+// }
+
+//Count backwards with For loop\\
+// var myArray = [];
+// for (var  i = 9; i > 0; i -= 2) {
+//   myArray.push(i)
+// }
+
+//Iterate through array with a for loop\\
+// using for loop, sum values in myArr and store in new variable
+// var myArray = [2,3,4,5,6]
+// var total = 0
+// for (var i = 0; i < myArray.length; i++) {
+//   total += myArr[i]
+// }
+
+//Nesting for loops\\
+// var myArr = [
+//   [1,2],[3,4],[5,6,7]
+// ]
+
+// function multiplyAll(arr) {
+// var product = 1;
+// for (var i = 0; i < arr.length; i++) {
+//   for (var j = 0; j < arr[i].length; j++) {
+//     product *= arr[i][j]
+//   }
+// }
+// return product;
+// }
+// multiplyAll(myArr);
+
