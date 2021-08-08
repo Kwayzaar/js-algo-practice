@@ -164,6 +164,7 @@
 //   return records;
 // }
 
+///////////////////////////////////////////////
 //While loops\\
 //Runs as long as parameter is true --> i <= 5 --> run when we don't exactly know how many iterations we will need 
 //myArray should have 5 - 0 in descending order 
@@ -244,13 +245,109 @@
         // sum first (n -1) elements of array add to value at index arr[n-1]
 //   }
 // }
-
 // sum([2, 3, 4], 1) --> 2
   //sum(arr, n - 1) + arr[n - 1]
   //sum(arr, 1 - 1) + arr[1 - 1]
   //0 + 2 --> 2 
-
+//------------------
 // sum([2, 3, 4], 2) --> 5
   //sum(arr, 2 - 1) + arr[2 - 1]
   //sum value of first element of array and add to value at index 1
   //2 + (index 1) 3 --> 5
+
+//Nest if loops in a for loop to iterate through array of objects\\
+//Array of objects
+// var contacts = [
+//   {
+//       "firstName": "Akira",
+//       "lastName": "Laine",
+//       "number": "0543236543",
+//       "likes": ["Pizza", "Coding", "Brownie Points"]
+//   },
+//   {
+//       "firstName": "Harry",
+//       "lastName": "Potter",
+//       "number": "0994372684",
+//       "likes": ["Hogwarts", "Magic", "Hagrid"]
+//   },
+//   {
+//       "firstName": "Sherlock",
+//       "lastName": "Holmes",
+//       "number": "0487345643",
+//       "likes": ["Intriguing Cases", "Violin"]
+//   },
+//   {
+//       "firstName": "Kristian",
+//       "lastName": "Vos",
+//       "number": "unknown",
+//       "likes": ["JavaScript", "Gaming", "Foxes"]
+//   }
+// ];
+//function should use the "name" of an object to check is prop passed in exists
+// function lookUpProfile(name,prop) {
+//   //use for loop to iterate through an array 
+//   for (let i = 0; i < contacts.length; i++) {
+//     //if loop checks each object for name entered truthiness
+//     if (name === contacts[i].firstName) {
+//       //if name is true, nested if loop checks object for prop truthiness
+//       if (contacts[i].hasOwnProperty(prop)) {
+//         //bracket notation used for dynamism (i, prop)
+//         return contacts[i][prop]
+//       } else {
+//         return "No such property"
+//       }
+//     }
+//   }
+//   //placed outside for loop, if name is false "no such contact" returned
+//   return "No such contact"
+// }
+//Alternative function using "in"
+// function lookUpProfile(name,prop) {
+//   for (let i = 0; i < contacts.length; i++) {
+//     if (name === contacts[i].firstName) {
+//       //"in" operator checks object for prop
+//       if (prop in contacts[i]) {
+//         return contacts[i][prop]
+//       } else {
+//         return "No such property"
+//       }
+//     }
+//   }
+//   return "No such contact"
+// }
+
+/////////////////////////////////////////////////
+//Math.random()\\
+//Useful for generating random behavior
+//generates random decimal between 0 (inclusive) and 1 (exclusive)
+// function randomNum() {
+//   return Math.random()
+// }
+
+//Generate random whole numbers\\
+//multiply by a number to raise value of decimal
+//remember Math.random() does not return a 1, only 0 
+//use Math.floor() to round the decimal down to nearest whole number 
+// function randomWholenum() {
+//   //returns rando whole num between 0 and 9 
+//   // return Math.floor(Math.random() * 10)  
+
+//   //return rando whole num between 0 and 99
+//   // return Math.floor(Math.random() * 100)
+// }
+
+//Generating random whole numbers within a range\\
+// function randomRange(myMin, myMax) {
+  //the max-min calucation ensures the number we are using in math.random will be +1 greater than max, ensuring the max number is included in the range  
+//  return Math.floor(Math.random() * (myMax - myMin + 1) + myMin)
+// }
+
+//////////////////////////////////////////////////////
+//parseInt()\\
+//turns string into integer, if first char can't be converted will return NaN
+// function convertToInteger(str) {
+//   return parseInt(str)
+// }
+
+//parseInt with Radix\\
+//parseInt also takes second argument for radix (specifies base number in a string)
