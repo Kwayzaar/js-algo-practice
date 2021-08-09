@@ -343,6 +343,7 @@
 // }
 
 //////////////////////////////////////////////////////
+
 //parseInt()\\
 //turns string into integer, if first char can't be converted will return NaN
 // function convertToInteger(str) {
@@ -351,3 +352,86 @@
 
 //parseInt with Radix\\
 //parseInt also takes second argument for radix (specifies base number in a string)
+//radix can be integer 2 - 36
+// function convertToInteger(str) {
+  //this will take a binary number, anc convert it to whole number using a base 2 system
+//   return parseInt(str, 2)
+// }
+//convertToInteger("10011");
+
+///////////////////////////////////////////////
+
+//Ternaries(conditional operator)\\
+
+//Ternary is a one-line if/else expression
+//syntax -> a ? b : c 
+//a -> condition, b -> run when true, c -> run when false
+//Example regular if/else
+// function findGreater(a, b) {
+//   if(a > b) {
+//     return "a is greater";
+//   }
+//   else {
+//     return "b is greater";
+//   }
+// }
+//ternary
+// function findGreater(a, b) {
+//   return a > b ? "a is greater" : "b is greater"
+// }
+
+//Using multiple Ternary operators 
+// Example if, else/if, else statement
+// function findGreaterOrEqual(a, b) {
+//   if (a === b) {
+//     return "a and b are equal";
+//   }
+//   else if (a > b) {
+//     return "a is greater";
+//   }
+//   else {
+//     return "b is greater";
+//   }
+// }
+//Ternary 
+//multiline for cleaner code 
+// function findGreaterOrEqual(a, b) {
+//   return (a === b) ? "a and b are equal"
+//     : (a > b) ? "a is greater"
+//     : "b is greater"
+// }
+
+//Recursion Revisited\\
+
+//Using recursion to create a countdown\\
+// function countdown(n){
+    //escape statement 
+    //When n is less than 1 recursive function will end
+//   if (n < 1) {
+//     return []
+//   } else {
+    //function keeps getting called until escape statment is reached and empty array is provided 
+    //function moves back up call stack and unshifts the values into the empty array 
+//     const arr = countdown(n - 1)
+//     arr.unshift(n)
+//     return arr
+//   }
+// }
+//Another Example - Recursion to create a range of numbers 
+// function rangeOfNumbers(startNum, endNum) {
+//   if (startNum >= endNum) {
+//     return [startNum];
+//   } else {
+    //endNum is decremented by 1 until it is equal to startNum
+//     const arr = rangeOfNumbers(startNum, endNum - 1)
+    //results are pushed (added to end) into array, starting at bottom of callstack, which would be the startNum parameter
+//     arr.push(endNum)
+//     return arr
+//   }
+// };
+//Using Ternary 
+// function rangeOfNumbers(startNum, endNum) {
+//   return  startNum >= endNum
+//     ? [startNum] 
+//     : [...rangeOfNumbers(startNum, endNum - 1), endNum]
+// };
