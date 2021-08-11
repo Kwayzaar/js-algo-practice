@@ -247,8 +247,8 @@
 // }
 // sum([2, 3, 4], 1) --> 2
   //sum(arr, n - 1) + arr[n - 1]
-  //sum(arr, 1 - 1) + arr[1 - 1]
-  //0 + 2 --> 2 
+    // --> sum(arr, 1 - 1) + arr[1 - 1]
+    // --> 0 + 2 --> 2 
 //------------------
 // sum([2, 3, 4], 2) --> 5
   //sum(arr, 2 - 1) + arr[2 - 1]
@@ -285,14 +285,19 @@
 // ];
 //function should use the "name" of an object to check is prop passed in exists
 // function lookUpProfile(name,prop) {
+
 //   //use for loop to iterate through an array 
 //   for (let i = 0; i < contacts.length; i++) {
+
 //     //if loop checks each object for name entered truthiness
 //     if (name === contacts[i].firstName) {
+
 //       //if name is true, nested if loop checks object for prop truthiness
 //       if (contacts[i].hasOwnProperty(prop)) {
+
 //         //bracket notation used for dynamism (i, prop)
 //         return contacts[i][prop]
+
 //       } else {
 //         return "No such property"
 //       }
