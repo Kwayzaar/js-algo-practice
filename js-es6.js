@@ -203,3 +203,89 @@
 // allow us to get values from and object, and set values to an object 
 // setter functions can invoke calculations or overwrite value completely 
 // ex: 
+// Create class that takes in a temp in F and converts to C 
+// class Thermostat {
+//   constructor(fahrenheit) {
+//     this.fahrenheit = fahrenheit
+//   }
+
+//   get temperature() {
+//     return (5 / 9) * (this.fahrenheit - 32)
+//   }
+
+//   set temperature(celsius) {
+//     this.fahrenheit = (celsius * 9.0) / 5 + 32
+//   }
+// }
+// const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+// let temp = thermos.temperature; // 24.44 in Celsius
+// thermos.temperature = 26;
+// temp = thermos.temperature; // 26 in Celsius
+
+// Modules and import/export \\
+
+// write a script in a file with a type of "module" so that the file may import and export things
+// <script type="module" scr="file.js"></script>
+
+// export from file (named export)
+// const add(x, y) {
+//   return x + y 
+// }
+// export { add }
+
+// export default
+// Usually used when one value is being exported from file, or to create fallback value for a file or module 
+// export default function subtract(x, y) {
+//   return x - y;
+// }
+
+// import into file 
+// import { add } from './file_name.js'
+
+// import all contents of a file using "import * as" syntax
+// the "as" is just a variable name 
+// import * as myMathModule from './file_name.js'
+// access items imported in current file like so:
+// myMathModule.add(2,3)
+
+// importing a default export 
+// drop curlies from import value. value is a wtv variable you choose 
+// import add from './file_name.js'
+
+// Javascript promises \\
+
+// A promise to do something - usually asynchronously. when task completes, promise is either fulfilled or fails to be 
+// promise is a constructor function so the "new" keyword must be used 
+// takes a function as argument with 2 parameters - resolve, reject 
+// promise has 3 states: pending, fulfilled, rejected 
+// ex:
+// const makeServerRequest = new Promise((resolve, reject) => { })
+// this will always be stuck in pending state bc no way to complete promise is added. This is what resolve and reject are used for 
+// resolve used when you want promise to succedd, reject when you want it to fail 
+// ex: 
+// const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+//   let responseFromServer;
+    
+//   if(responseFromServer) {
+//     resolve("We got the data")
+//   } else {  
+//     reject("Data not received")
+//   }
+// });
+
+// .then/.catch methods
+// .then is used to handle a fulfilled promise, since a promise can take an unknown amount of time to complete 
+// .catch is used when promise is rejected
+// using example from above 
+//if(responseFromServer) {
+//   resolve("We got the data")
+    // .then method used with callback function, result is parameter passed in 
+//   .then(result => console.log(result))
+// } else {  
+//   reject("Data not received");
+    // .catch is executed as soon as promise is rejected, error being the argument 
+//   .catch(error => console.log(error))
+// }
+// });
+// 
