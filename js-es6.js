@@ -181,3 +181,25 @@
 // };
 // We do not need to state name as the variable, since the parameter is already called name 
 // const createPerson = (name, age, gender) => ({ name, age, gender });
+
+
+// Using class syntax to define constructor function \\
+
+// class syntax is just syntax, does not implement full object-oriented paradigm like python, ruby, etc
+// class keyword declares new function, and contructor is added 
+// constructor method is a special method for creating/initializing an object created with a class 
+// constructor is invoked when [new] is called to created new object
+// ex:
+// use a class keyword and constructor to create a [Vegetable] class 
+// class Vegetable {
+//   constructor(name) {
+//     this.name = name
+//   }
+// }
+// const carrot = new Vegetable('carrot');
+// console.log(carrot.name); // Should display 'carrot'
+
+// getters and setters 
+// allow us to get values from and object, and set values to an object 
+// setter functions can invoke calculations or overwrite value completely 
+// ex: 
