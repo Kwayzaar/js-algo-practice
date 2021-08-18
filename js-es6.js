@@ -261,7 +261,7 @@
 // ex:
 // const makeServerRequest = new Promise((resolve, reject) => { })
 // this will always be stuck in pending state bc no way to complete promise is added. This is what resolve and reject are used for 
-// resolve used when you want promise to succedd, reject when you want it to fail 
+// resolve used when you want promise to succeed, reject when you want it to fail 
 // ex: 
 // const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer represents a response from a server
