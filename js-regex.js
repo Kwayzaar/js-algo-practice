@@ -42,9 +42,41 @@
 
 // use "g" flag to find more than the first match 
 // ex:
+// Find both cases of "twinkle" in the string 
 // let twinkleStar = "Twinkle, twinkle, little star";
   // flags can be combined, below uses i and g flag
 // let starRegex = /twinkle/ig
 // let result = twinkleStar.match(starRegex)
+
+// WildCard Period \\
+
+// using "." character allows us to search for patterns without knowing all the patterns 
+// wildcard character will match any one character 
+// ex:
+// make regex that matches below string, but not "there is a bug in my code"
+// let exampleStr = "Let's have fun with regular expressions!";
+// let unRegex = /un./
+// let result = unRegex.test(exampleStr);
+
+// Character Classes \\
+// this is a balance between matching literal patterns, and the wildcard period that matches everything 
+// allows you to define a group of characters you want to match by placing them in brackets 
+// ex: 
+// Find all the vowels in the string 
+// let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+// let vowelRegex = /[aeiou]/ig
+// let result = quoteSample.match(vowelRegex);
+
+// Matching range of characters 
+// use the hyphen to define a range of characters, like in the alphabet 
+// ex:
+// Match all letters in the string 
+// let quoteSample = "The quick brown fox jumps over the lazy dog.";
+// let alphabetRegex = /[a-z]/ig
+// let result = quoteSample.match(alphabetRegex)
+// --> returns all letters 
+  // can fit the range inbetween letters to define a word 
+// let alphabetRegex = /q[a-z]ick/ig
+// --> will return quick
 
 
