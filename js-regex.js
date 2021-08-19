@@ -69,6 +69,7 @@
 
 // Matching range of characters 
 // use the hyphen to define a range of characters, like in the alphabet 
+// also works on numbers 
 // ex:
 // Match all letters in the string 
 // let quoteSample = "The quick brown fox jumps over the lazy dog.";
@@ -79,4 +80,11 @@
 // let alphabetRegex = /q[a-z]ick/ig
 // --> will return quick
 
+// Match letters and numbers 
+// Can combine numbers and letters range to find all 
+// let quoteSample = "Blueberry 3.141592653s are delicious.";
+// let myRegex = /[h-s2-6]/ig; 
+// let result = quoteSample.match(myRegex); 
 
+// Negated character sets 
+// Use a caret ^ character after opening bracket and before the characters you don't want matched 
