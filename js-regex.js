@@ -4,7 +4,7 @@
 // Test Method \\
 
 // use a regex to look for a word in a string 
-//case-sensitive 
+// case-sensitive 
 // quotes are not needed around string in regex
 // ex:
 // looking for "Hello" in "Hello, World!"
@@ -31,7 +31,7 @@
 // Match Method \\
 
 // .match() can be used to extract any matches in strings that we do find 
-// apply to a string and pass redex in as argument 
+// apply to a string and pass regex in as argument 
 // ex:
 // extract coding from string 
 // let extractStr = "Extract the word 'coding' from this string.";
@@ -44,7 +44,7 @@
 // ex:
 // Find both cases of "twinkle" in the string 
 // let twinkleStar = "Twinkle, twinkle, little star";
-  // flags can be combined, below uses i and g flag
+//   flags can be combined, below uses i and g flag
 // let starRegex = /twinkle/ig
 // let result = twinkleStar.match(starRegex)
 
@@ -76,7 +76,7 @@
 // let alphabetRegex = /[a-z]/ig
 // let result = quoteSample.match(alphabetRegex)
 // --> returns all letters 
-  // can fit the range inbetween letters to define a word 
+//   can fit the range inbetween letters to define a word 
 // let alphabetRegex = /q[a-z]ick/ig
 // --> will return quick
 
@@ -88,3 +88,20 @@
 
 // Negated character sets 
 // Use a caret ^ character after opening bracket and before the characters you don't want matched 
+
+// Match characters that occur one or more times, or 0 or more times \\
+
+// The + character allows us to match a character or group of characters 
+// let difficultSpelling = "Mississippi";
+// let myRegex = /s+/;
+// let result = difficultSpelling.match(myRegex);
+//  --> returns all instances of 'ss'
+
+// The * sign matches characters that occur zero or more times 
+// chewiQuote = "Aaaaaaaargh!"
+// let chewieRegex = /Aa*/;
+// let result = chewieQuote.match(chewieRegex);
+// --> returns "Aaaaaaaaa"
+
+// Greedy/Lazy matches 
+// finds the longest/shortest part of a string that matches 
