@@ -147,9 +147,8 @@
 
 // MATCHING ALL LETTERS, NUMBERS, SYMBOLS \\
 
-// we can use character classes to search all letters in alphabet -> [a-z]
-// we can instead use shorthand \w, which equals [A-za-z0-9_]
-// this character class matches all letters and numbers and the underscore character
+// use \w, which matches all letters and numbers plus the underscore character
+// \w equals [A-za-z0-9_]
 // ex:
 // let longHand = /[A-Za-z0-9_]+/;
 // let shortHand = /\w+/;
@@ -188,4 +187,12 @@
 // let result = movieName.match(noNumRegex).length;
 // --> returns 17, which is count of all characters that are not numbers
 
-
+// RESTRICT USERNAMES \\
+  // 1. Usernames can only use alpha-numeric characters.
+  // 2. The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+  // 3. Username letters can be lowercase and uppercase.
+  // 4. Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+// answer:
+// let username = "JackOfAllTrades";
+// let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+// let result = userCheck.test(username);
