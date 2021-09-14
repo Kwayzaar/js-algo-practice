@@ -161,8 +161,8 @@
 // shortHand.test(varNames);
 // all tests would return true 
 
-// if \w searchs all alphanumerics, we can use \W to search the opposite of alphanumerics 
-// \W is the same as [^A-Za-z0-9_]
+// use \W to search the opposite of alphanumerics 
+// \W is the same as [^A-Za-z0-9_], which excludes all numbers and letters 
 // let shortHand = /\W/;
 // let numbers = "42%";
 // let sentence = "Coding!";
@@ -171,6 +171,21 @@
 // first match --> ["%"]
 // second match --> ["!"]
 
-// shortcut for finding digits or numbers is \d
+// use \d to find all numbers 
 // \d is the same as [0-9]
-// 
+// ex:
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g; // Change this line
+// let result = movieName.match(numRegex).length;
+// --> counts how many digits in the string, returns 4
+// we use the "g" flag to find more than the first instance 
+
+// use \D to find all non-numbers 
+// \D is the same as character class [^0-9], which excludes numbers 
+// ex: 
+// let movieName = "2001: A Space Odyssey";
+// let noNumRegex = /\D/g;
+// let result = movieName.match(noNumRegex).length;
+// --> returns 17, which is count of all characters that are not numbers
+
+
