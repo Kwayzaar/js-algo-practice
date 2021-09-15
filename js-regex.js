@@ -214,3 +214,32 @@
 // --> returns 32 (value of all characters minus whitespace)
 
 // SPECIFY UPPER/LOWER NUMBER OF MATCHES \\
+// use quantity specifiers (curly bois {}) to specify a match for a pattern that only occurs a certain number of times 
+// the two numbers placed in the curly bois indicate lower and upper range of a pattern 
+// this is different from using +, which indicates one or more characters, and *, which indicates zero or more characters 
+// ex: finding the letter a that occurs a certain number of times, within a range 
+// let A4 = "aaaah";
+// let A2 = "aah";
+// let multipleA = /a{3,5}h/;
+// multipleA.test(A4);
+// multipleA.test(A2);
+// --> A4 returns true, A2 returns false 
+// ex: match phrase "oh no" only when it has 3-6 letter h's 
+// let ohStr = "Ohhh no";
+// let ohRegex = /oh{3,6}\sno/i;
+// let result = ohRegex.test(ohStr);
+// --> true 
+
+// lower number of matches 
+// use quantity specifier with one number and a comma to specify lower number of matches with no upper limit 
+// ex: match string "Hazzah" only when it has 4 or more z's
+// let haStr = "Hazzzzah";
+// let haRegex = /haz{4,}ah/i; 
+// let result = haRegex.test(haStr);
+
+// exact number of matches
+// place only one number in curly bois to indicate exact match req'd
+// ex: match "Timber" only when m occurs 4 times 
+// let timStr = "Timmmmber";
+// let timRegex = /tim{4}ber/i; 
+// let result = timRegex.test(timStr);
