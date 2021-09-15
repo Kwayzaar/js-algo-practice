@@ -145,7 +145,7 @@
 // storyRegex.test(noEnding);
 //  --> returns false 
 
-// MATCHING ALL LETTERS, NUMBERS, SYMBOLS \\
+// MATCHING ALL LETTERS, NUMBERS, SYMBOLS, WHITESPACE \\
 
 // use \w, which matches all letters and numbers plus the underscore character
 // \w equals [A-za-z0-9_]
@@ -196,3 +196,21 @@
 // let username = "JackOfAllTrades";
 // let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
 // let result = userCheck.test(username);
+
+// MATCH WHITESPACE AND NON-WHITESPACE \\
+// use \s to match whitespace and returns, tab, form feed, and new line characters 
+// similar to class [\r\t\f\n\v]
+// ex:
+// let whiteSpace = "Whitespace. Whitespace everywhere!"
+// let spaceRegex = /\s/g;
+// whiteSpace.match(spaceRegex);
+// --> [" ", " "] (all the whitespaces)
+
+// use \S to search for everything except whitespace 
+// ex: 
+// let whiteSpace = "Whitespace. Whitespace everywhere!"
+// let nonSpaceRegex = /\S/g;
+// whiteSpace.match(nonSpaceRegex).length;
+// --> returns 32 (value of all characters minus whitespace)
+
+// SPECIFY UPPER/LOWER NUMBER OF MATCHES \\
