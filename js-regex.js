@@ -122,7 +122,7 @@
 
 // MATCHING STRING PATTERNS \\
 
-// Matching beginnging string patters 
+// Matching beginnging string patterns 
 // the caret ^ character can be used outside of a character set to search for patterns at the beginning of strings 
 // **DO NOT confuse this with using the caret ^ to negate characters inside a character set (ex: [^negatethiswholeset])
 // ex:
@@ -243,3 +243,27 @@
 // let timStr = "Timmmmber";
 // let timRegex = /tim{4}ber/i; 
 // let result = timRegex.test(timStr);
+
+// CHECK FOR ALL OR NONE \\
+// use ? character to search for the possible existence of the character that precedes it 
+// ex: match both american (favorite) and british (favourite) spellings of the word 
+// let favWord = "favorite";
+// let favRegex = /favou?rite/i;
+// let result = favRegex.test(favWord);
+
+// POSITIVE AND NEGATIVE LOOKAHEAD \\
+// positive lookahead: (?=...) looks ahead to makes sure element in search pattern is there, but doesn't actually match 
+// negative lookahead: (?!...) looks ahead to make sure element in search pattern is not there. rest of pattern is returned if element is not there
+// ex: 
+// let quit = "qu";
+// let noquit = "qt";
+// let quRegex= /q(?=u)/;
+// let qRegex = /q(?!u)/;
+// quit.match(quRegex);
+// noquit.match(qRegex);
+//  --> both examples return "q"
+
+// ex: match passwords that are greater than 5 characters long, and have two consecutive digits 
+// let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{6,})(?=\D*\d{2})/; // Change this line
+// let result = pwRegex.test(sampleWord);
