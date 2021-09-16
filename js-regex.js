@@ -106,18 +106,21 @@
 // --> returns "Aaaaaaaaa"
 
 // GREEDY/LAZY MATCHES \\
-// finds the longest/shortest part of a string that matches 
+// finds the longest/shortest part of a string that matches the regex pattern and returns it as a match 
 // regex's are greedy by default 
 // add ? character to change a regex to lazy match 
 // let text = "<h1>Winter is coming</h1>";
 // let myRegex = /<.*>/;
 // let result = text.match(myRegex);
 //  --> <h1>Winter is coming</h1>
-// we can grab just the h1 by using a ? character in the regex 
+// --> .* is basically a return all, so we return the whole string since there is text in between two parentheses
+
+// we can grab just the first h1 by using a ? character in the regex, for a lazy match
 // let text = "<h1>Winter is coming</h1>";
 // let myRegex = /<.*?>/; // Change this line
 // let result = text.match(myRegex);
 // --> <h1>
+// --> since the first <h1> matches the required pattern, the regex stops searching
 // using regex to parse HTML should be avoided, but can be used for html pattern matching 
 
 // MATCHING STRING PATTERNS \\
@@ -267,3 +270,12 @@
 // let sampleWord = "astronaut";
 // let pwRegex = /(?=\w{6,})(?=\D*\d{2})/; // Change this line
 // let result = pwRegex.test(sampleWord);
+
+// CHECK FOR MIXED GROUPING OF CHARACTERS \\
+// use () to check for mixed groups of characters 
+// we use the test() method to check the string using the regex
+// ex: check the string for either "penguin" or "pumpkin"
+// let testStr = "Pumpkin";
+// let testRegex = /P(engu|umpk)in/;
+// testRegex.test(testStr);
+// --> returns true 
