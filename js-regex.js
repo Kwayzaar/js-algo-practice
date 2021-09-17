@@ -68,7 +68,7 @@
 // let vowelRegex = /[aeiou]/ig
 // let result = quoteSample.match(vowelRegex);
 
-// Matching range of characters 
+// MATCHING RANGE OF CHARACTERS
 // use the hyphen to define a range of characters, like in the alphabet 
 // also works on numbers 
 // ex:
@@ -81,7 +81,7 @@
 // let alphabetRegex = /q[a-z]ick/ig
 // --> will return quick
 
-// Match letters and numbers 
+// Match letters and numbers
 // Can combine numbers and letters range to find all 
 // let quoteSample = "Blueberry 3.141592653s are delicious.";
 // let myRegex = /[h-s2-6]/ig; 
@@ -279,3 +279,61 @@
 // let testRegex = /P(engu|umpk)in/;
 // testRegex.test(testStr);
 // --> returns true 
+
+// ex2: create regex so that it checks for names of either Frankline or Eleanor Roosevelt, leave concession for middle names 
+// we will use parentheses to check for a mixed grouping, and a greedy match in case a middle name is inserted in there 
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(franklin|eleanor).*Roosevelt/ig; 
+// let result = myRegex.test(myString); 
+// --> will test true with "Eleanor Roosevelt", but will also return true with "Franklin D. Roosevelt" since the greedy match req matches the whole string based on the first name req being satisfied 
+// --> we could even run a lazy match on it and it will still return true 
+
+// CAPTURE GROUPS \\
+
+// Use capture groups to find repeated patterns \\
+// capture groups are used to find repeated substrings 
+// we enclose the pattern in (), which saves the substring to a "variable"
+// this "variable" (called capture group) can be accessed within the same regex using a \ character and the number of the capture group
+// when capture groups are created they are automatically numbered by the position of their parentheses (l to r) starting at 1 
+// ex: create a regex that matches row while it occurs multiple times 
+// let repeatStr = "row row row your boat";
+// let repeatRegex = /(\w+) \1 \1/;
+// repeatRegex.test(repeatStr); // Returns true
+// repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
+// the .match() returns the array of matched substring, along with the capture group 
+
+// ex2: use a capture group to match a string that repeats 3 times 
+// let repeatNum = "42 42 42";
+// let reRegex = /^(\d+) \1 \1$/;
+// let result = reRegex.test(repeatNum);
+// --> tests true 
+// the caret ^ searches for the pattern at the beginning of the string
+// (\d+) is capture group created, and the \1 \1 indicates how many times we'd like it to repeat 
+// the $ indicates that we want to find the capture group at the end 
+
+// Use capture groups to search and replace \\
+// we can search and replace text using .replace()
+// two inputs for .replace(), first is regex to search for, second is what to replace with or a function to do something 
+// ex:
+// let wrongText = "The sky is silver.";
+// let silverRegex = /silver/;
+// wrongText.replace(silverRegex, "blue");
+// --> returns "the sky is blue"
+
+// use $ to access capture groups in the replacement string 
+// ex: 
+// "Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1'/)
+// --> returns "Camp Code"
+
+// ex2: use a capture group to replace "one two three" with "three two one"
+// let str = "one two three";
+// let fixRegex = /(\w+)\s(\w+)\s(\w+)/; 
+// let replaceText = "$3 $2 $1";
+// let result = str.replace(fixRegex, replaceText);
+// --> returns "three two one"
+
+// EXERCISE: Remove whitespace from start to end \\
+// let hello = "   Hello, World!  ";
+// let wsRegex = /^\s+|\s+$/g; 
+// let result = hello.replace(wsRegex, ""); 
+// --> returns "Hello, World!"

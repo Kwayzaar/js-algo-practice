@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    h1 {
+      color: blue;
+    }
+    .with-id {
+      color: red;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1>
+    <div id="focusable" tabindex="0">
+      <p>Press here</p>
+    </div>
+  </h1>
+</body>
+</html>
+
+
+
+<script>
+  document.getElementById("focusable").addEventListener("keydown", function(event){
+    if(event.keyCode==13){
+      alert("I'm focusable!")
+    }
+  })
+
+  function grabElements(name){
+    const elements = document.getElementsByTagName("h*")
+    let regex = /<^h\d$>/
+    
+    // const elementArray= [] 
+    // const temp = document.getElementsByTagName("*")
+
+    // const regex = new RegExp(/(^|\\s)/ + name + /(\\s|$)/)
+    // for (let i = 0; i < temp.length; i++) {
+    //   if ( regex.test(temp[i].name) ) {
+    //     elementArray.push(temp[i])
+    //   }
+    // }
+
+    return elementArray
+  }
+
+</script>
