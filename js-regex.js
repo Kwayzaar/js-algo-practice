@@ -280,7 +280,7 @@
 // testRegex.test(testStr);
 // --> returns true 
 
-// ex2: create regex so that it checks for names of either Frankline or Eleanor Roosevelt, leave concession for middle names 
+// ex2: create regex so that it checks for names of either Franklin or Eleanor Roosevelt, leave concession for middle names 
 // we will use parentheses to check for a mixed grouping, and a greedy match in case a middle name is inserted in there 
 // let myString = "Eleanor Roosevelt";
 // let myRegex = /(franklin|eleanor).*Roosevelt/ig; 

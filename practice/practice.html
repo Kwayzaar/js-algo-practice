@@ -5,48 +5,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    h1 {
-      color: blue;
-    }
-    .with-id {
+    #with {
       color: red;
     }
   </style>
   <title>Document</title>
 </head>
 <body>
-  <h1>
+  <h2>
     <div id="focusable" tabindex="0">
       <p>Press here</p>
+      <button onclick="giveAtt()">Try</button>
     </div>
-  </h1>
+  </h2>
 </body>
 </html>
 
 
 
 <script>
+
+  // grabs HTML element by ID given and adds a keydown event listener 
   document.getElementById("focusable").addEventListener("keydown", function(event){
+    // when "enter" is pressed an alert will pop up 
+    // keycodes may be changed to suit any input 
     if(event.keyCode==13){
       alert("I'm focusable!")
     }
   })
 
-  function grabElements(name){
-    const elements = document.getElementsByTagName("h*")
-    let regex = /<^h\d$>/
-    
-    // const elementArray= [] 
-    // const temp = document.getElementsByTagName("*")
+  function giveAtt(){
+    // the for loop increments by 1, and starting at 1, allowing us to add that integer to our "h" string from "h1" to "h6"
+    for (let i = 1; i <= 6; i++) {
 
-    // const regex = new RegExp(/(^|\\s)/ + name + /(\\s|$)/)
-    // for (let i = 0; i < temp.length; i++) {
-    //   if ( regex.test(temp[i].name) ) {
-    //     elementArray.push(temp[i])
-    //   }
-    // }
-
-    return elementArray
+      const headers = document.getElementsByTagName('h'+i);
+      // nested for loop sets attributes for h1 - h6 elements 
+      for (let j = 0; j < headers.length; j++) {
+          headers[j].setAttribute("role", "presentation");
+      }
+    }
   }
+
+  const countdown = (a,b) => {
+  // sums the two parameters 
+  let sum = a + b
+  
+  const countTracker = () => {
+    if(sum < 0){
+      // stops counter when 0 is reached
+      clearInterval(printInterval)
+      return 
+    }
+    // prints sum then decrements sum value
+    console.log(sum)
+    sum--
+  }
+  // initializes the intervals
+  const printInterval = setInterval(countTracker, 1000)
+}
 
 </script>
