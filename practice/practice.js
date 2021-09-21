@@ -46,18 +46,30 @@
 // miniMaxSum(arr)
 
 // 3 Time: Standard to Military 
-const s = "01:05:45PM"
+// const string = "04:05:45AM"
 
-function timeConversion(string) {
-  let hour = s.substring(0,2) * 1
-  let timeFormat = s.substring(2,8)
-  if(s.endsWith("PM")) {
-    return hour + 12 +timeFormat
-  } else if(s.endsWith("AM") && hour ===12) {
-    return ("00" + timeFormat)
-  } else {
-    return hour + timeFormat
-  }
-}
+// function timeConversion(s) {
+//   let hour = s.substring(0,2) * 1
+//   let timeFormat = s.substring(2,8)
+//   // midnight
+//   if(s.endsWith("AM") && hour ===12) {
+//     return ("00" + timeFormat)
+//   } 
+//     // noon
+//     else if(s.endsWith("PM") && hour === 12) {
+//     return hour + timeFormat
+//   } 
+//     // PM times  
+//     else if(s.endsWith("PM")) {
+//     return hour + 12 +timeFormat
+//   } 
+//     // all other times in AM
+//     else {
+//       if(hour < 10 && s.endsWith("AM")) {
+//         return "0" + hour +timeFormat
+//       }
+//     return hour + timeFormat
+//   }
+// }
 
-timeConversion(s)
+// timeConversion(string)
