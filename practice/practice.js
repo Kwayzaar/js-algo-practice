@@ -73,3 +73,18 @@
 // }
 
 // timeConversion(string)
+
+// Test: find the Median
+
+arr = [5,3,1,2,4]
+
+function findMedian(arr) {
+  const sortArr = arr.sort((a, b) => a - b)
+  const mid = Math.ceil(sortArr.length / 2)
+  
+  const median = sortArr.length % 2 == 0 ? (sortArr[mid] + sortArr[mid - 1] / 2) : sortArr[mid - 1]
+  
+  return median
+}
+
+findMedian(arr)
