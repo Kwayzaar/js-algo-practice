@@ -76,15 +76,35 @@
 
 // Test: find the Median
 
-arr = [5,3,1,2,4]
+// arr = [5,3,1,2,4]
 
-function findMedian(arr) {
-  const sortArr = arr.sort((a, b) => a - b)
-  const mid = Math.ceil(sortArr.length / 2)
+// function findMedian(arr) {
+//   const sortArr = arr.sort((a, b) => a - b)
+//   const mid = Math.ceil(sortArr.length / 2)
   
-  const median = sortArr.length % 2 == 0 ? (sortArr[mid] + sortArr[mid - 1] / 2) : sortArr[mid - 1]
+//   const median = sortArr.length % 2 == 0 ? (sortArr[mid] + sortArr[mid - 1] / 2) : sortArr[mid - 1]
   
-  return median
+//   return median
+// }
+
+// findMedian(arr)
+
+// Day 2 \\
+const a = [1,2,3,4,3,2,1]
+
+const lonelyInteger = () => {
+  const alreadySeen = []
+  const soloInt = []
+
+  a.forEach(function(str) {
+    if(alreadySeen[str]) {
+      console.log(str)
+    } else if(!alreadySeen[str]) {
+        soloInt.push()
+    } else {
+      alreadySeen[str] = true 
+    }
+  })
 }
 
-findMedian(arr)
+lonelyInteger(a)
