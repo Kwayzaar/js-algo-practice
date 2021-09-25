@@ -92,19 +92,13 @@
 // Day 2 \\
 const a = [1,2,3,4,3,2,1]
 
-const lonelyInteger = () => {
-  const alreadySeen = []
-  const soloInt = []
+const lonelyInteger = (arr) => {
+  let alreadySeen = false
+  let duplicates = []
 
-  a.forEach(function(str) {
-    if(alreadySeen[str]) {
-      console.log(str)
-    } else if(!alreadySeen[str]) {
-        soloInt.push()
-    } else {
-      alreadySeen[str] = true 
-    }
-  })
+  console.log(arr.sort((a,b) => a - b))
+  
 }
+
 
 lonelyInteger(a)
