@@ -55,3 +55,20 @@
 // }
 // --> [ 'learning', 'to', 'code', 'is', 'fun' ]
 
+// CHECKING FOR PRESENCE OF AN ELEMENT \\
+
+// indexOf()
+// we can use indexOf() to check for an element in an array
+// useful since arrays can be mutated at any time 
+
+// takes an element as parameter, and returns the index of that element in the array being checked
+// returns -1 if the element does not exist in the array 
+// ex:
+// function quickCheck(arr, elem) {
+//   return arr.indexOf(elem) 
+// }
+
+// console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+// --> -1
+// console.log(quickCheck(["onions", "squash", "shallots"], "squash"));
+// --> 1
