@@ -72,3 +72,62 @@
 // --> -1
 // console.log(quickCheck(["onions", "squash", "shallots"], "squash"));
 // --> 1
+
+// OBJECT PROPERTY MANIPULATION \\
+
+// use delete to remove a key-value pair from an object
+// syntax: delete object.property
+
+// checking for property in an object, use hasOwnProperty() or in 
+// both of these methods return either true or false 
+
+// hasOwnProperty()
+// object.hasOwnProperty('property')
+
+// in
+// 'property' in object 
+
+// ex: 
+// users.hasOwnProperty('Alan');
+// 'Alan' in users;
+
+// Use for...in statement to iterate through keys of an object \\
+// for...in loops through property names 
+// ex:
+// for (let user in users) {
+  // --> 'user' is a variable we are creating to store the property names 
+//   console.log(user);
+// }
+// --> console logs all the keys in the object 
+
+// ex: return a count for all users online 
+// const users = { 
+//     Alan: {
+//       online: false
+//     },
+//     Jeff: {
+//       online: true
+//     },
+//     Sarah: {
+//       online: false
+//     }
+//   }
+
+// function countOnline(usersObj) {
+//   let count = 0
+//   for(let user in usersObj) {
+      // --> create variable user to capture each name (which is first property)
+//     if(usersObj[user].online === true ){
+        // --> we are looking at the [user] prop inside userObjs, to see if the online prop === true 
+//       count++
+//     }
+//   }
+//     return count
+// }
+// --> returns 1
+
+// GENERATE ARRAY \\
+// Object.keys() will turn an object into an array, with strings representing the object props 
+// ex syntax: 
+// Object.keys(obj)
+// --> returns the Object "obj" as an array 
