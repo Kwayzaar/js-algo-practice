@@ -77,3 +77,17 @@
 // }
 
 // repeatStringNumTimes("abc", 3)
+// --> returns "abcabc"
+
+// TRUNCATE A STRING 
+// function truncateString(str, num) {
+//   let string = str
+//   if(str.length > num) {
+//     string = str.substring(0, num) + "..."
+//   }
+//   return string
+// }
+
+// truncateString("A-tisket a-tasket A green and yellow basket", 8)
+// --> "A-tisket..."
+
