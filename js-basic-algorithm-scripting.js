@@ -65,3 +65,15 @@
 
 // confirmEnding("Bastian", "n")
 //  --> returns true 
+
+// REPEAT A STRING 
+// function repeatStringNumTimes(str, num) {
+//   let string = ""
+//   while(num > 0){
+//     string += str
+//     num--
+//   }
+//   return string
+// }
+
+// repeatStringNumTimes("abc", 3)
