@@ -155,3 +155,15 @@
 
 // bouncer([7, "ate", "", false, 9])
 // --> returns [7, "ate", 9]
+
+// FIND THE INDEX OF A NUMBER
+// Also, insert the number into an array first, then sort the array
+// function getIndexToIns(arr, num) {
+//   let localArr = arr
+//   localArr.unshift(num) 
+//   let sortArr = localArr.sort((a,b) => a - b)
+
+//   return sortArr.findIndex((element) => element === num);
+// }
+// getIndexToIns([40, 60], 50)
+// --> returns 1
