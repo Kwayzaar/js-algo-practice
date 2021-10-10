@@ -141,3 +141,17 @@
 // }
 // frankenSplice([1, 2, 3], [4, 5, 6], 1)
 // --> [4,1,2,3,5,6]
+
+// REMOVE FALSY VALUES FROM AN ARRAY 
+// function bouncer(arr) {
+//   let newArr = []
+//   for(let i = 0; i < arr.length; i++) {
+//     if(arr[i]) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr
+// }
+
+// bouncer([7, "ate", "", false, 9])
+// --> returns [7, "ate", 9]
