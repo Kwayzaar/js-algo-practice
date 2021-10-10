@@ -129,3 +129,15 @@
 
 // titleCase("I'm a little tea pot")
 // --> returns "I'm A Little Teapot"
+
+// SLICE AND SPLICE
+// function frankenSplice(arr1, arr2, n) {
+//   let extracted = arr2.slice(0)
+//   for(let i = 0; i < arr1.length; i++){
+//     extracted.splice(n, 0, arr1[i])
+//     n++
+//   }
+//   return extracted
+// }
+// frankenSplice([1, 2, 3], [4, 5, 6], 1)
+// --> [4,1,2,3,5,6]
