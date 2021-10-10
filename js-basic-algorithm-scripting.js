@@ -117,3 +117,15 @@
 
 // booWho([1,2,3])
 // --> returns false 
+
+// CAPITALIZE THE FIRST LETTER OF EVERY WORD 
+// function titleCase(str) {
+//   let splitStr = str.split(" ")
+//   for(let i = 0;i < splitStr.length; i++) {
+//        splitStr[i] = splitStr[i][0].toUpperCase() + splitStr[i].substr(1).toLowerCase()
+//   }
+//   return splitStr.join(" ")
+// }
+
+// titleCase("I'm a little tea pot")
+// --> returns "I'm A Little Teapot"
