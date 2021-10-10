@@ -105,3 +105,15 @@
 
 // findElement([1, 2, 3, 4], num => num % 2 === 0)
 // --> returns 2
+
+// CHECK VALUE FOR BOOLEAN PRIMITIVE 
+// function booWho(bool) {
+//   if(bool === true || bool === false){
+//     return true 
+//   } else {
+//     return false 
+//   } 
+// }
+
+// booWho([1,2,3])
+// --> returns false 
