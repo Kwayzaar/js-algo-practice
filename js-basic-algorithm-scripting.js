@@ -167,3 +167,19 @@
 // }
 // getIndexToIns([40, 60], 50)
 // --> returns 1
+
+// COMPARE A STRING TO ANOTHER STRING
+// see if the second item in the array exists in the first item 
+// function mutation(arr) {
+//   let checker = arr[1].toLowerCase()
+//   let str = arr[0].toLowerCase()
+//   for(let i = 0; i < checker.length; i++){
+//     if(str.indexOf(checker[i]) < 0){
+//       return false
+//     }
+//   }
+//   return true 
+// }
+
+// mutation(["hello", "hey"])
+// --> false
