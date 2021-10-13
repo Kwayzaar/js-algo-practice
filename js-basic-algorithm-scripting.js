@@ -105,3 +105,93 @@
 
 // findElement([1, 2, 3, 4], num => num % 2 === 0)
 // --> returns 2
+
+// CHECK VALUE FOR BOOLEAN PRIMITIVE 
+// function booWho(bool) {
+//   if(bool === true || bool === false){
+//     return true 
+//   } else {
+//     return false 
+//   } 
+// }
+
+// booWho([1,2,3])
+// --> returns false 
+
+// CAPITALIZE THE FIRST LETTER OF EVERY WORD 
+// function titleCase(str) {
+//   let splitStr = str.split(" ")
+//   for(let i = 0;i < splitStr.length; i++) {
+//        splitStr[i] = splitStr[i][0].toUpperCase() + splitStr[i].substr(1).toLowerCase()
+//   }
+//   return splitStr.join(" ")
+// }
+
+// titleCase("I'm a little tea pot")
+// --> returns "I'm A Little Teapot"
+
+// SLICE AND SPLICE
+// function frankenSplice(arr1, arr2, n) {
+//   let extracted = arr2.slice(0)
+//   for(let i = 0; i < arr1.length; i++){
+//     extracted.splice(n, 0, arr1[i])
+//     n++
+//   }
+//   return extracted
+// }
+// frankenSplice([1, 2, 3], [4, 5, 6], 1)
+// --> [4,1,2,3,5,6]
+
+// REMOVE FALSY VALUES FROM AN ARRAY 
+// function bouncer(arr) {
+//   let newArr = []
+//   for(let i = 0; i < arr.length; i++) {
+//     if(arr[i]) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr
+// }
+
+// bouncer([7, "ate", "", false, 9])
+// --> returns [7, "ate", 9]
+
+// FIND THE INDEX OF A NUMBER
+// Also, insert the number into an array first, then sort the array
+// function getIndexToIns(arr, num) {
+//   let localArr = arr
+//   localArr.unshift(num) 
+//   let sortArr = localArr.sort((a,b) => a - b)
+
+//   return sortArr.findIndex((element) => element === num);
+// }
+// getIndexToIns([40, 60], 50)
+// --> returns 1
+
+// COMPARE A STRING TO ANOTHER STRING
+// see if the second item in the array exists in the first item 
+// function mutation(arr) {
+//   let checker = arr[1].toLowerCase()
+//   let str = arr[0].toLowerCase()
+//   for(let i = 0; i < checker.length; i++){
+//     if(str.indexOf(checker[i]) < 0){
+//       return false
+//     }
+//   }
+//   return true 
+// }
+
+// mutation(["hello", "hey"])
+// --> false
+
+// CHUNK AN ARRAY BY SIZE
+// function chunkArrayInGroups(arr, size) {
+//   let newArr = []
+//   for(let i = 0; i < arr.length; i+= size){
+//     newArr.push(arr.slice(i,i + size)) 
+//   }
+//   return newArr
+// }
+ 
+// chunkArrayInGroups(["a", "b", "c", "d"], 2)
+// --> returns [[a,b], [c,d]]
