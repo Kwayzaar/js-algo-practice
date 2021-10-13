@@ -10,3 +10,16 @@
 //   this.color = "Gray";
 //   this.numLegs = 4;
 // }
+
+// Using a constructor to create Objects \\
+// We can create a new object by calling the constructor with "new", and assign it a name 
+// The constructor will give the object all the properties it has 
+// function Dog() {
+//   this.name = "Rupert";
+//   this.color = "brown";
+//   this.numLegs = 4;
+// }
+
+// let hound = new Dog() //this is the object being created 
+// --> hound = { name: 'Rupert', color: 'brown', numLegs: 4 }
+
