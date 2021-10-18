@@ -34,3 +34,14 @@
 // let terrier = new Dog("Gus", "white")
 // --> { name: 'Gus', color: 'white', numLegs: 4 }
 
+// instanceof 
+// when a constructor function creates a new object, it is said to create an "instance"
+// We can use instanceof to verify that an object is a instance of a constructor 
+// ex: 
+// function House(numBedrooms) {
+//   this.numBedrooms = numBedrooms;
+// }
+
+// let myHouse = new House(4)
+
+// myHouse instanceof House
